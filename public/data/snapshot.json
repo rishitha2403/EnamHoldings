@@ -1,0 +1,141 @@
+{
+ "asof": "2026-11-15T08:00:00+05:30",
+ "eod": "2026-11-13",
+ "dates": [
+  "2026-10-16",
+  "2026-10-19",
+  "2026-10-21",
+  "2026-10-22",
+  "2026-10-23",
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30",
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-08",
+  "2026-11-09",
+  "2026-11-11",
+  "2026-11-12",
+  "2026-11-13"
+ ],
+ "portfolio": [
+  {
+   "sym": "RELIANCE",
+   "name": "Reliance Industries",
+   "sector": "Energy & Telecom",
+   "size": "Large"
+  },
+  {
+   "sym": "TCS",
+   "name": "Tata Consultancy Services",
+   "sector": "IT Services",
+   "size": "Large"
+  },
+  {
+   "sym": "HDFCBANK",
+   "name": "HDFC Bank",
+   "sector": "Banks",
+   "size": "Large"
+  },
+  {
+   "sym": "ICICIBANK",
+   "name": "ICICI Bank",
+   "sector": "Banks",
+   "size": "Large"
+  },
+  {
+   "sym": "BAJFINANCE",
+   "name": "Bajaj Finance",
+   "sector": "NBFC",
+   "size": "Large"
+  },
+  {
+   "sym": "LT",
+   "name": "Larsen & Toubro",
+   "sector": "Capital Goods",
+   "size": "Large"
+  },
+  {
+   "sym": "ASIANPAINT",
+   "name": "Asian Paints",
+   "sector": "Paints",
+   "size": "Large"
+  },
+  {
+   "sym": "TITAN",
+   "name": "Titan Company",
+   "sector": "Jewellery & Lifestyle",
+   "size": "Large"
+  },
+  {
+   "sym": "SUNPHARMA",
+   "name": "Sun Pharmaceutical",
+   "sector": "Pharma",
+   "size": "Large"
+  },
+  {
+   "sym": "TRENT",
+   "name": "Trent",
+   "sector": "Retail",
+   "size": "Large"
+  },
+  {
+   "sym": "INDIGO",
+   "name": "InterGlobe Aviation",
+   "sector": "Aviation",
+   "size": "Large"
+  },
+  {
+   "sym": "DIXON",
+   "name": "Dixon Technologies",
+   "sector": "EMS",
+   "size": "Mid"
+  },
+  {
+   "sym": "POLYCAB",
+   "name": "Polycab India",
+   "sector": "Cables & Wires",
+   "size": "Mid"
+  },
+  {
+   "sym": "CDSL",
+   "name": "CDSL",
+   "sector": "Market Infra",
+   "size": "Mid"
+  },
+  {
+   "sym": "DEEPAKNTR",
+   "name": "Deepak Nitrite",
+   "sector": "Chemicals",
+   "size": "Mid"
+  },
+  {
+   "sym": "PIIND",
+   "name": "PI Industries",
+   "sector": "Agrochemicals",
+   "size": "Mid"
+  },
+  {
+   "sym": "KAYNES",
+   "name": "Kaynes Technology",
+   "sector": "EMS & Semis",
+   "size": "Small"
+  },
+  {
+   "sym": "CLEAN",
+   "name": "Clean Science & Technology",
+   "sector": "Specialty Chemicals",
+   "size": "Small"
+  }
+ ],
+ "research": [
+  "PIIND",
+  "KAYNES",
+  "TITAN"
+ ]
+}

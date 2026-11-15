@@ -1,0 +1,353 @@
+{
+  "PIIND": {
+    "sources": [
+      {
+        "id": "q3fy26",
+        "label": "Q3 FY26 call · 13 Feb 2026",
+        "url": "https://nsearchives.nseindia.com/corporate/PIIND_20022026184511_EarningConcall_LetterQ3FY26Transcript_RS_sd.pdf"
+      },
+      {
+        "id": "q4fy26",
+        "label": "Q4 FY26 call · 20 May 2026",
+        "url": "https://www.piindustries.com/wp-content/uploads/2026/05/Transcript-of-Q4-FY26-Earnings-conference-call.pdf"
+      },
+      {
+        "id": "q1fy27",
+        "label": "Q1 FY27 call · 12 Aug 2026",
+        "url": "https://www.piindustries.com/wp-content/uploads/2026/08/Transcript-of-Q1-FY27-Earnings-conference-call.pdf"
+      },
+      {
+        "id": "q2fy27",
+        "label": "Q2 FY27 call · 5 Nov 2026 (exchange summary of transcript filing)",
+        "url": "https://nsearchives.nseindia.in/corporate/PIIND_12112026103314_Transcript_intimation.pdf"
+      }
+    ],
+    "claims": [
+      {
+        "topic": "FY27 revenue growth",
+        "metric": "sales_yoy",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we are positive to say that we will start seeing growth in FY27.",
+            "page": 7
+          },
+          {
+            "src": "q4fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we can definitely look at growth, at nearly late-stage single digit or early-stage double digit",
+            "page": 12
+          },
+          {
+            "src": "q1fy27",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we are looking at a positive trajectory, and in the lower single digit as indicated earlier.",
+            "page": 8
+          }
+        ],
+        "delivered": "Q1 FY27 sales ₹1,702 cr (−10.4% YoY); Q2 ₹1,702 cr (−9.1% YoY). H1 −9.8% YoY.",
+        "verdict": "missed",
+        "note": "Guidance was walked down twice in six months, from high-single or low-double digits to low single digits, while H1 came in at about −10%. Even +2% for FY27 needs H2 to grow about 17% YoY."
+      },
+      {
+        "topic": "Sequential recovery from Q4 FY26",
+        "metric": "sales_qoq",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "there will be a sequential growth in quarter 4 over what we have seen in quarter 3.",
+            "page": 6
+          }
+        ],
+        "delivered": "Q4 FY26 sales ₹1,565 cr vs Q3 ₹1,376 cr (+13.7% QoQ), still −12.4% YoY.",
+        "verdict": "kept",
+        "note": "Delivered sequentially, but the recovery stalled at the same ~₹1,700 cr run-rate for the next two quarters."
+      },
+      {
+        "topic": "FY26 EBITDA margin 25–26%",
+        "metric": "opm",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "we would still hold ourselves for the year what we have started the year with 25% to 26.",
+            "page": 8
+          }
+        ],
+        "delivered": "FY26 EBITDA ₹1,732 cr on ₹6,714 cr sales = 25.8%.",
+        "verdict": "kept",
+        "note": ""
+      },
+      {
+        "topic": "Gross margin",
+        "metric": "gm",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "maintain our long-term GP margin guidance between 50% to 52%, and we continue to move with that.",
+            "page": 8
+          },
+          {
+            "src": "q4fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we said we would continue to manage and maintain the average gross margin of last year.",
+            "page": 16
+          },
+          {
+            "src": "q1fy27",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we will try and maintain with the optimization that the company is trying to do",
+            "page": 8
+          }
+        ],
+        "delivered": "Q2 FY27 gross margin 49% (per Q2 transcript filing); EBITDA margin fell to 14% from 29% a year ago.",
+        "verdict": "missed",
+        "note": "Management said in August it would 'try and maintain' the targeted gross margin. One quarter later it was below the long-term 50–52% floor."
+      },
+      {
+        "topic": "CSM exports turn positive in FY27",
+        "metric": "exports",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "We are pretty confident it will turn positive in FY27.",
+            "page": 14
+          },
+          {
+            "src": "q4fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "somewhere around $ 1-1.2 billion which is already the order book position",
+            "page": 11
+          }
+        ],
+        "delivered": "Q2 FY27 AgChem exports −18% YoY (per Q2 transcript filing).",
+        "verdict": "missed",
+        "note": "The $1–1.2 bn order book has not converted into revenue. Exports are the swing factor for the whole year."
+      },
+      {
+        "topic": "Domestic growth back on track",
+        "metric": "domestic",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "We expect the domestic growth to be back on track from FY27 onwards.",
+            "page": 5
+          }
+        ],
+        "delivered": "Q2 FY27 domestic agri +19% YoY (per Q2 transcript filing).",
+        "verdict": "kept",
+        "note": "The only growth engine that is working, but domestic is the smaller half of the business."
+      },
+      {
+        "topic": "First homegrown NCE (Pioxaniliprole) in FY27",
+        "metric": "launch",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "the first Indian innovation in Ag-chem, Pioxaniliprole, will be commercialised in the coming financial year.",
+            "page": 11
+          }
+        ],
+        "delivered": "Launched as 'Pioxazon' in Q2 FY27 (per Q2 transcript filing).",
+        "verdict": "kept",
+        "note": ""
+      },
+      {
+        "topic": "FY27 tax rate ~24%",
+        "metric": "tax",
+        "trail": [
+          {
+            "src": "q4fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "We expect FY27 and thereafter ETR to inch upto 24%.",
+            "page": 4
+          },
+          {
+            "src": "q1fy27",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "We expect ETR for FY27 to be around 24%.",
+            "page": 6
+          }
+        ],
+        "delivered": "Effective tax 24% in Q1 FY27, 34% in Q2 FY27.",
+        "verdict": "mixed",
+        "note": "A 34% ETR on a smaller profit base cuts PAT further. Ask whether this is a mix effect or one-off."
+      },
+      {
+        "topic": "FY27 capex",
+        "metric": "capex",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "So broadly, it will be about INR 500 crore to INR 600 crore.",
+            "page": 12
+          },
+          {
+            "src": "q4fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "we should have INR 700 to INR 800 crore of capex both at the manufacturing level",
+            "page": 11
+          }
+        ],
+        "delivered": "≈₹570 cr in H1 (derived: Δ fixed assets + Δ CWIP + H1 depreciation from the Sep-26 balance sheet).",
+        "verdict": "on_track",
+        "note": "Capex guidance went up while revenue guidance went down, so spending continues into a downturn."
+      },
+      {
+        "topic": "Pharma CRDMO ₹500–600 cr in 2–3 years",
+        "metric": "pharma",
+        "trail": [
+          {
+            "src": "q4fy26",
+            "who": "Mayank Singhal, VC & MD",
+            "quote": "we are looking to target to get this to the next two to three years, a INR 500-INR 600 crore business",
+            "page": 12
+          }
+        ],
+        "delivered": "Segment revenue is reported in the results filing; not yet broken out in this snapshot's parsed data.",
+        "verdict": "too_early",
+        "note": "Ask for the H1 pharma run-rate on the next call. Reaching ₹500–600 cr needs several times the current scale."
+      },
+      {
+        "topic": "Working-capital normalisation",
+        "metric": "wc",
+        "trail": [
+          {
+            "src": "q3fy26",
+            "who": "Sanjay Agarwal, Group CFO",
+            "quote": "we expect to improve this as the market scenarios normalize in the coming quarters.",
+            "page": 17
+          }
+        ],
+        "delivered": "Working-capital days 120 in FY26 vs 67 in FY25; debtor days 88 vs 64.",
+        "verdict": "missed",
+        "note": "Cash from operations fell to ₹474 cr in FY26 from ₹1,413 cr."
+      }
+    ]
+  },
+  "KAYNES": {
+    "sources": [
+      {
+        "id": "q1fy27",
+        "label": "Q1 FY27 call · 8 Aug 2026",
+        "url": "https://nsearchives.nseindia.com/corporate/KAYNESTECH_12082026164943_TranscriptoftheEarningAnnouncement.pdf"
+      },
+      {
+        "id": "q2res",
+        "label": "Q2 FY27 results filing · 14 Nov 2026 23:42",
+        "url": "https://nsearchives.nseindia.in/corporate/KAYNESTECH_14112026234020_SEBI_Q2_2027_Final.pdf"
+      }
+    ],
+    "claims": [
+      {
+        "topic": "Grow at 2× the EMS market",
+        "metric": "sales_yoy",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "we are quite confident of achieving the twice the market growth",
+            "page": 14
+          }
+        ],
+        "delivered": "Q1 FY27 sales ₹946 cr, +40.5% YoY. Q2 numbers filed last night; extraction pending in this snapshot.",
+        "verdict": "on_track",
+        "note": "Revenue growth has never been the problem. The question is what it costs in cash."
+      },
+      {
+        "topic": "Turn cash-positive by end of FY27",
+        "metric": "cfo",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "that by end of the financial year we'll turn the cash positive, we are pretty confident on that.",
+            "page": 6
+          }
+        ],
+        "delivered": "Operating cash flow −₹82 cr in FY25 and −₹600 cr in FY26; CFO/EBITDA −80% in FY26.",
+        "verdict": "at_risk",
+        "note": "To deliver, FY27 operating cash flow has to swing by more than ₹600 cr, while revenue grows about 30%. The Q2 auditor review flags restated prior-period errors."
+      },
+      {
+        "topic": "Metering receivables turnaround",
+        "metric": "receivables",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "we will be able to do the turnaround by end of this year in terms of receivables from the metering business.",
+            "page": 13
+          }
+        ],
+        "delivered": "Debtor days 154 (FY26), with working-capital days up from 64 to 133 over three years.",
+        "verdict": "at_risk",
+        "note": ""
+      },
+      {
+        "topic": "Margins normalise in a couple of quarters",
+        "metric": "opm",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "We expect this could take a couple of quarters for profitability to normalize",
+            "page": 5
+          },
+          {
+            "src": "q1fy27",
+            "who": "Ramesh Kunhikannan, Executive VC",
+            "quote": "It is going to be a tough year.",
+            "page": 16
+          }
+        ],
+        "delivered": "Q1 FY27 OPM 15.6% vs 16.8% a year ago; PAT −24% YoY.",
+        "verdict": "too_early",
+        "note": "Check against Q2 once the filing is parsed."
+      },
+      {
+        "topic": "OSAT + PCB revenue ₹450–500 cr in FY27",
+        "metric": "new_biz",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "INR450 to INR500 crores, which is what we are targeting at this point in time",
+            "page": 15
+          }
+        ],
+        "delivered": "Commercial booking expected from Q3/Q4. On 12 Nov, Vishay agreed to take 49% of Kaynes Semicon.",
+        "verdict": "too_early",
+        "note": "The Vishay JV de-risks OSAT demand but dilutes ownership of the most valuable option."
+      },
+      {
+        "topic": "Capex ~₹850 cr; 'cash is not a constraint'",
+        "metric": "capex",
+        "trail": [
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "We said we will be funding for this capex for this year is about INR300 crores for OSAT, INR300 crores for PCB",
+            "page": 16
+          },
+          {
+            "src": "q1fy27",
+            "who": "Dr N. Muthukumar, MD",
+            "quote": "Cash is not a constraint here.",
+            "page": 8
+          }
+        ],
+        "delivered": "FY26 free cash flow −₹1,841 cr, funded by ₹1,580 cr of financing inflows (QIP + debt).",
+        "verdict": "mixed",
+        "note": "Saying cash is not a constraint is only true while equity markets stay open. Kaynes has raised two QIPs since 2023."
+      }
+    ]
+  }
+}

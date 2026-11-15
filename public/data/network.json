@@ -1,0 +1,1436 @@
+{
+ "_note": "SYNTHETIC demo network. Every contact below is fictional. Employers and schools are real so the overlap engine has something to match against; the people are not. In production this file is created on-device from the investor's own import and never leaves the device.",
+ "me": {
+  "name": "You",
+  "role": "Portfolio Manager, Mumbai long-only fund",
+  "career": [
+   {
+    "org": "Kotak Institutional Equities",
+    "title": "Analyst, Industrials",
+    "from": 2018,
+    "to": 2022
+   },
+   {
+    "org": "McKinsey & Company",
+    "title": "Business Analyst",
+    "from": 2014,
+    "to": 2016
+   }
+  ],
+  "education": [
+   {
+    "school": "IIT Kanpur",
+    "degree": "B.Tech EE",
+    "year": 2014
+   },
+   {
+    "school": "IIM Ahmedabad",
+    "degree": "PGP",
+    "year": 2018
+   }
+  ]
+ },
+ "contacts": [
+  {
+   "id": "c01",
+   "name": "Meera Iyer",
+   "headline": "DGM Compliance, Axis Bank",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Axis Bank",
+     "title": "Deputy GM, Compliance",
+     "from": 2021,
+     "to": null
+    },
+    {
+     "org": "ICICI Bank",
+     "title": "Manager, Overseas Banking Compliance",
+     "from": 2014,
+     "to": 2021,
+     "note": "Overseas compliance team"
+    }
+   ],
+   "education": [
+    {
+     "school": "NMIMS",
+     "degree": "MBA",
+     "year": 2013
+    }
+   ],
+   "tags": [
+    "bank compliance",
+    "RBI regulation",
+    "private banks"
+   ],
+   "strength": 3,
+   "last": "2026-06-10",
+   "met": "CFA Society event, 2023",
+   "knows": [
+    [
+     "c02",
+     3
+    ],
+    [
+     "c28",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c02",
+   "name": "Karthik Menon",
+   "headline": "VP Credit Risk, HDFC Bank",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "HDFC Bank",
+     "title": "VP, Credit Risk",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "ICICI Bank",
+     "title": "Risk Analyst",
+     "from": 2014,
+     "to": 2016
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Ahmedabad",
+     "degree": "PGP",
+     "year": 2018
+    }
+   ],
+   "tags": [
+    "private banks",
+    "credit risk",
+    "retail lending"
+   ],
+   "strength": 4,
+   "last": "2026-10-02",
+   "met": "IIM-A batchmate",
+   "knows": [
+    [
+     "c01",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c03",
+   "name": "Rohit Bansal",
+   "headline": "Fund Manager, Northlight AMC",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Northlight AMC",
+     "title": "Fund Manager",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "UTI Asset Management",
+     "title": "Equity Analyst → Fund Manager",
+     "from": 2012,
+     "to": 2019
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Calcutta",
+     "degree": "PGDM",
+     "year": 2012
+    }
+   ],
+   "tags": [
+    "asset management",
+    "consumer",
+    "governance"
+   ],
+   "strength": 4,
+   "last": "2026-09-18",
+   "met": "Ex-buy-side peer",
+   "knows": [
+    [
+     "c30",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c04",
+   "name": "Ananya Krishnan",
+   "headline": "Partner, Saffron Ridge Capital",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Saffron Ridge Capital",
+     "title": "Partner",
+     "from": 2022,
+     "to": null
+    },
+    {
+     "org": "Warburg Pincus",
+     "title": "Principal",
+     "from": 2016,
+     "to": 2022
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Kanpur",
+     "degree": "B.Tech ME",
+     "year": 2012
+    }
+   ],
+   "tags": [
+    "private equity",
+    "consumer",
+    "financial services"
+   ],
+   "strength": 3,
+   "last": "2026-04-22",
+   "met": "IIT Kanpur alumni meet",
+   "knows": [
+    [
+     "c03",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c05",
+   "name": "Sanjay Kulkarni",
+   "headline": "CEO, Rangoli Distributors (paints)",
+   "city": "Pune",
+   "career": [
+    {
+     "org": "Rangoli Distributors",
+     "title": "CEO",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "Asian Paints",
+     "title": "Regional Sales Head, West",
+     "from": 2009,
+     "to": 2023
+    }
+   ],
+   "education": [
+    {
+     "school": "Symbiosis",
+     "degree": "MBA",
+     "year": 2008
+    }
+   ],
+   "tags": [
+    "decorative paints",
+    "dealer channel",
+    "consumer durables"
+   ],
+   "strength": 3,
+   "last": "2025-12-05",
+   "met": "Channel check, 2024",
+   "knows": [
+    [
+     "c31",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c06",
+   "name": "Arjun Rao",
+   "headline": "Director, Siemens EDA India",
+   "city": "Bengaluru",
+   "career": [
+    {
+     "org": "Siemens EDA",
+     "title": "Director, Field Engineering",
+     "from": 2017,
+     "to": null
+    },
+    {
+     "org": "Mentor Graphics",
+     "title": "Applications Engineer → Manager",
+     "from": 2014,
+     "to": 2017,
+     "note": "India team under the country manager"
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Kanpur",
+     "degree": "B.Tech EE",
+     "year": 2014
+    }
+   ],
+   "tags": [
+    "semiconductors",
+    "EDA",
+    "chip design"
+   ],
+   "strength": 5,
+   "last": "2026-10-28",
+   "met": "IIT Kanpur batchmate & wingmate",
+   "knows": [
+    [
+     "c07",
+     3
+    ],
+    [
+     "c29",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "c07",
+   "name": "Divya Nair",
+   "headline": "Process Integration Lead, Micron ATMP Sanand",
+   "city": "Ahmedabad",
+   "career": [
+    {
+     "org": "Micron Technology",
+     "title": "Process Integration Lead, ATMP Sanand",
+     "from": 2024,
+     "to": null
+    },
+    {
+     "org": "Tessolve Semiconductor",
+     "title": "Senior Manager, Test Engineering",
+     "from": 2019,
+     "to": 2024
+    }
+   ],
+   "education": [
+    {
+     "school": "NIT Calicut",
+     "degree": "B.Tech ECE",
+     "year": 2012
+    }
+   ],
+   "tags": [
+    "semiconductors",
+    "OSAT",
+    "test & packaging"
+   ],
+   "strength": 2,
+   "last": "2025-09-12",
+   "met": "SEMICON India 2025",
+   "knows": [
+    [
+     "c06",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c08",
+   "name": "Pradeep Hegde",
+   "headline": "CFO, Voltwise Systems (EMS startup)",
+   "city": "Mysuru",
+   "career": [
+    {
+     "org": "Voltwise Systems",
+     "title": "CFO",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "Kaynes Technology",
+     "title": "Financial Controller",
+     "from": 2017,
+     "to": 2023
+    }
+   ],
+   "education": [
+    {
+     "school": "ICAI",
+     "degree": "Chartered Accountant",
+     "year": 2010
+    }
+   ],
+   "tags": [
+    "EMS",
+    "working capital",
+    "smart meters"
+   ],
+   "strength": 3,
+   "last": "2026-03-11",
+   "met": "Kaynes IPO roadshow, 2022",
+   "knows": [
+    [
+     "c25",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c09",
+   "name": "Neha Sharma",
+   "headline": "Business Development, Vishay India",
+   "city": "Bengaluru",
+   "career": [
+    {
+     "org": "Vishay Intertechnology",
+     "title": "Business Development Manager, India",
+     "from": 2019,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Ahmedabad",
+     "degree": "PGP",
+     "year": 2018
+    }
+   ],
+   "tags": [
+    "semiconductors",
+    "passive components",
+    "power devices"
+   ],
+   "strength": 3,
+   "last": "2026-07-30",
+   "met": "IIM-A batchmate",
+   "knows": []
+  },
+  {
+   "id": "c10",
+   "name": "Vikram Shah",
+   "headline": "CFO, Kanak Jewels",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Kanak Jewels",
+     "title": "CFO",
+     "from": 2020,
+     "to": null
+    },
+    {
+     "org": "Titan Company",
+     "title": "Finance Manager, Jewellery Division",
+     "from": 2015,
+     "to": 2020
+    }
+   ],
+   "education": [
+    {
+     "school": "ICAI",
+     "degree": "Chartered Accountant",
+     "year": 2013
+    }
+   ],
+   "tags": [
+    "jewellery",
+    "gold",
+    "retail"
+   ],
+   "strength": 3,
+   "last": "2026-02-14",
+   "met": "Kotak days, client",
+   "knows": [
+    [
+     "c11",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c11",
+   "name": "Ishita Rao",
+   "headline": "Product Lead, CaratLane",
+   "city": "Chennai",
+   "career": [
+    {
+     "org": "CaratLane",
+     "title": "Product Lead",
+     "from": 2021,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Kanpur",
+     "degree": "B.Tech CSE",
+     "year": 2016
+    }
+   ],
+   "tags": [
+    "jewellery",
+    "D2C",
+    "consumer internet"
+   ],
+   "strength": 2,
+   "last": "2026-05-03",
+   "met": "IIT Kanpur junior",
+   "knows": [
+    [
+     "c10",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c12",
+   "name": "Rahul Verma",
+   "headline": "VP Strategy, Aarohan Chemicals",
+   "city": "Vadodara",
+   "career": [
+    {
+     "org": "Aarohan Chemicals",
+     "title": "VP Strategy",
+     "from": 2024,
+     "to": null
+    },
+    {
+     "org": "PI Industries",
+     "title": "Business Development, CSM Exports",
+     "from": 2015,
+     "to": 2024
+    }
+   ],
+   "education": [
+    {
+     "school": "ICT Mumbai",
+     "degree": "B.Chem Engg",
+     "year": 2011
+    }
+   ],
+   "tags": [
+    "agrochemicals",
+    "CSM",
+    "specialty chemicals"
+   ],
+   "strength": 4,
+   "last": "2026-08-20",
+   "met": "Plant visit, 2021",
+   "knows": [
+    [
+     "c13",
+     3
+    ],
+    [
+     "c26",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c13",
+   "name": "Sunita Joshi",
+   "headline": "Procurement Lead, Bayer CropScience",
+   "city": "Monheim",
+   "career": [
+    {
+     "org": "Bayer CropScience",
+     "title": "Procurement Lead, Active Ingredients",
+     "from": 2018,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Bombay",
+     "degree": "M.Tech Chemical",
+     "year": 2014
+    }
+   ],
+   "tags": [
+    "agrochemicals",
+    "global crop protection",
+    "sourcing"
+   ],
+   "strength": 2,
+   "last": "2025-10-24",
+   "met": "CPHI 2024",
+   "knows": [
+    [
+     "c12",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c14",
+   "name": "Deepak Iyer",
+   "headline": "Independent cGMP consultant",
+   "city": "Vadodara",
+   "career": [
+    {
+     "org": "Independent",
+     "title": "cGMP & Quality Consultant",
+     "from": 2022,
+     "to": null
+    },
+    {
+     "org": "Sun Pharmaceutical",
+     "title": "Head QA, Halol site",
+     "from": 2010,
+     "to": 2022
+    }
+   ],
+   "education": [
+    {
+     "school": "MS University Baroda",
+     "degree": "M.Pharm",
+     "year": 2004
+    }
+   ],
+   "tags": [
+    "pharma quality",
+    "USFDA",
+    "regulatory"
+   ],
+   "strength": 3,
+   "last": "2025-08-19",
+   "met": "Expert call, 2023",
+   "knows": [
+    [
+     "c15",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c15",
+   "name": "Farah Khan",
+   "headline": "Regulatory Affairs, Dr. Reddy's",
+   "city": "Hyderabad",
+   "career": [
+    {
+     "org": "Dr. Reddy's Laboratories",
+     "title": "Associate Director, Regulatory Affairs",
+     "from": 2017,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "NIPER",
+     "degree": "M.S. Pharm",
+     "year": 2012
+    }
+   ],
+   "tags": [
+    "pharma regulatory",
+    "CDSCO",
+    "USFDA"
+   ],
+   "strength": 2,
+   "last": "2026-01-15",
+   "met": "Conference panel",
+   "knows": [
+    [
+     "c14",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c16",
+   "name": "Amit Joshi",
+   "headline": "Director, MetroWorks Advisory",
+   "city": "Delhi",
+   "career": [
+    {
+     "org": "MetroWorks Advisory",
+     "title": "Director",
+     "from": 2021,
+     "to": null
+    },
+    {
+     "org": "Larsen & Toubro",
+     "title": "Senior Project Manager, Heavy Civil Infrastructure",
+     "from": 2012,
+     "to": 2021
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Delhi",
+     "degree": "B.Tech Civil",
+     "year": 2009
+    }
+   ],
+   "tags": [
+    "metro rail",
+    "EPC",
+    "infrastructure"
+   ],
+   "strength": 3,
+   "last": "2025-11-07",
+   "met": "Site visit, Delhi metro Ph-IV",
+   "knows": []
+  },
+  {
+   "id": "c17",
+   "name": "Priya Raman",
+   "headline": "Director, ECM, Kotak Investment Banking",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Kotak Investment Banking",
+     "title": "Director, Equity Capital Markets",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "Kotak Institutional Equities",
+     "title": "Associate",
+     "from": 2017,
+     "to": 2019
+    }
+   ],
+   "education": [
+    {
+     "school": "SRCC",
+     "degree": "B.Com",
+     "year": 2014
+    }
+   ],
+   "tags": [
+    "ECM",
+    "QIPs",
+    "NBFCs"
+   ],
+   "strength": 4,
+   "last": "2026-10-20",
+   "met": "Ex-colleague at Kotak",
+   "knows": [
+    [
+     "c18",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c18",
+   "name": "Siddharth Gupta",
+   "headline": "Head of Credit, LendLeaf",
+   "city": "Pune",
+   "career": [
+    {
+     "org": "LendLeaf",
+     "title": "Head of Credit",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "Bajaj Finance",
+     "title": "Product Manager, Consumer Durables Loans",
+     "from": 2017,
+     "to": 2023
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Indore",
+     "degree": "PGP",
+     "year": 2016
+    }
+   ],
+   "tags": [
+    "NBFCs",
+    "consumer credit",
+    "rural lending"
+   ],
+   "strength": 3,
+   "last": "2026-05-29",
+   "met": "Fintech meetup",
+   "knows": [
+    [
+     "c17",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c19",
+   "name": "Kavya Reddy",
+   "headline": "Strategy, Jio Platforms",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Jio Platforms",
+     "title": "Manager, Corporate Strategy",
+     "from": 2020,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Ahmedabad",
+     "degree": "PGP",
+     "year": 2018
+    }
+   ],
+   "tags": [
+    "telecom",
+    "digital",
+    "conglomerates"
+   ],
+   "strength": 3,
+   "last": "2026-07-04",
+   "met": "IIM-A batchmate",
+   "knows": []
+  },
+  {
+   "id": "c20",
+   "name": "Manish Agarwal",
+   "headline": "Principal, AI Practice, TCS",
+   "city": "Pune",
+   "career": [
+    {
+     "org": "Tata Consultancy Services",
+     "title": "Principal Consultant, AI",
+     "from": 2015,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Kanpur",
+     "degree": "B.Tech CSE",
+     "year": 2014
+    }
+   ],
+   "tags": [
+    "IT services",
+    "enterprise AI"
+   ],
+   "strength": 3,
+   "last": "2026-09-01",
+   "met": "IIT Kanpur batchmate",
+   "knows": []
+  },
+  {
+   "id": "c21",
+   "name": "Rajesh Pillai",
+   "headline": "Independent process consultant",
+   "city": "Vadodara",
+   "career": [
+    {
+     "org": "Independent",
+     "title": "Process Consultant",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "Deepak Nitrite",
+     "title": "Plant Head, Dahej",
+     "from": 2008,
+     "to": 2019
+    }
+   ],
+   "education": [
+    {
+     "school": "ICT Mumbai",
+     "degree": "B.Chem Engg",
+     "year": 2002
+    }
+   ],
+   "tags": [
+    "specialty chemicals",
+    "phenolics",
+    "chemical plants"
+   ],
+   "strength": 2,
+   "last": "2025-06-30",
+   "met": "Expert network call",
+   "knows": [
+    [
+     "c12",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c22",
+   "name": "Lakshmi Narayan",
+   "headline": "Head of Operations, Tejas Broking",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Tejas Broking",
+     "title": "Head of Operations",
+     "from": 2020,
+     "to": null
+    },
+    {
+     "org": "Central Depository Services",
+     "title": "Senior Manager, Operations",
+     "from": 2012,
+     "to": 2020
+    }
+   ],
+   "education": [
+    {
+     "school": "Mumbai University",
+     "degree": "M.Com",
+     "year": 2010
+    }
+   ],
+   "tags": [
+    "market infrastructure",
+    "depositories",
+    "broking"
+   ],
+   "strength": 2,
+   "last": "2026-03-20",
+   "met": "Industry roundtable",
+   "knows": []
+  },
+  {
+   "id": "c23",
+   "name": "Harsh Malhotra",
+   "headline": "Aviation consultant",
+   "city": "Gurugram",
+   "career": [
+    {
+     "org": "Independent",
+     "title": "Aviation Consultant",
+     "from": 2022,
+     "to": null
+    },
+    {
+     "org": "InterGlobe Aviation",
+     "title": "Network Planning Manager",
+     "from": 2016,
+     "to": 2022
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Lucknow",
+     "degree": "PGP",
+     "year": 2015
+    }
+   ],
+   "tags": [
+    "aviation",
+    "airlines"
+   ],
+   "strength": 2,
+   "last": "2026-02-02",
+   "met": "Expert call",
+   "knows": []
+  },
+  {
+   "id": "c24",
+   "name": "Nikhil Desai",
+   "headline": "Founder, CopperLine Wires",
+   "city": "Ahmedabad",
+   "career": [
+    {
+     "org": "CopperLine Wires",
+     "title": "Founder",
+     "from": 2021,
+     "to": null
+    },
+    {
+     "org": "Polycab India",
+     "title": "Channel Sales Manager",
+     "from": 2014,
+     "to": 2021
+    }
+   ],
+   "education": [
+    {
+     "school": "Nirma University",
+     "degree": "MBA",
+     "year": 2013
+    }
+   ],
+   "tags": [
+    "cables & wires",
+    "electricals",
+    "dealer channel"
+   ],
+   "strength": 2,
+   "last": "2025-12-15",
+   "met": "Channel check",
+   "knows": []
+  },
+  {
+   "id": "c25",
+   "name": "Sneha Kapoor",
+   "headline": "GM Operations, Dixon Technologies",
+   "city": "Noida",
+   "career": [
+    {
+     "org": "Dixon Technologies",
+     "title": "GM, Operations (Mobiles)",
+     "from": 2019,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIT Kanpur",
+     "degree": "B.Tech ME",
+     "year": 2015
+    }
+   ],
+   "tags": [
+    "EMS",
+    "mobile manufacturing",
+    "PLI"
+   ],
+   "strength": 3,
+   "last": "2026-08-08",
+   "met": "IIT Kanpur junior",
+   "knows": [
+    [
+     "c08",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c26",
+   "name": "Ravi Shankar",
+   "headline": "Founder, Molekule Labs",
+   "city": "Pune",
+   "career": [
+    {
+     "org": "Molekule Labs",
+     "title": "Founder",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "Clean Science and Technology",
+     "title": "Senior Scientist, R&D",
+     "from": 2018,
+     "to": 2023
+    }
+   ],
+   "education": [
+    {
+     "school": "NCL Pune",
+     "degree": "PhD Chemistry",
+     "year": 2017
+    }
+   ],
+   "tags": [
+    "specialty chemicals",
+    "catalysis",
+    "green chemistry"
+   ],
+   "strength": 2,
+   "last": "2026-04-11",
+   "met": "Startup pitch",
+   "knows": [
+    [
+     "c12",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c27",
+   "name": "Tanvi Mehta",
+   "headline": "Merchandising Lead, Zudio (Trent)",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Trent",
+     "title": "Merchandising Lead, Zudio",
+     "from": 2019,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "NIFT",
+     "degree": "M.Des",
+     "year": 2017
+    }
+   ],
+   "tags": [
+    "value retail",
+    "apparel"
+   ],
+   "strength": 2,
+   "last": "2026-06-25",
+   "met": "Store visit",
+   "knows": []
+  },
+  {
+   "id": "c28",
+   "name": "Anil Kumar",
+   "headline": "Independent Director (banks & NBFCs)",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Independent",
+     "title": "Independent Director",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "Reserve Bank of India",
+     "title": "Deputy GM, Dept of Banking Supervision",
+     "from": 2005,
+     "to": 2019
+    }
+   ],
+   "education": [
+    {
+     "school": "Delhi School of Economics",
+     "degree": "MA Economics",
+     "year": 1996
+    }
+   ],
+   "tags": [
+    "RBI regulation",
+    "bank supervision",
+    "governance"
+   ],
+   "strength": 2,
+   "last": "2025-07-14",
+   "met": "Governance seminar",
+   "knows": [
+    [
+     "c01",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c29",
+   "name": "Prof. S. Mukherjee",
+   "headline": "Professor, EE, IIT Kanpur",
+   "city": "Kanpur",
+   "career": [
+    {
+     "org": "IIT Kanpur",
+     "title": "Professor, Electrical Engineering",
+     "from": 2006,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "UC Berkeley",
+     "degree": "PhD EE",
+     "year": 2005
+    }
+   ],
+   "tags": [
+    "semiconductors",
+    "device physics",
+    "packaging"
+   ],
+   "strength": 3,
+   "last": "2026-01-26",
+   "met": "B.Tech project advisor",
+   "knows": [
+    [
+     "c06",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "c30",
+   "name": "Gaurav Sethi",
+   "headline": "Head of Strategy, Fortis Healthcare",
+   "city": "Gurugram",
+   "career": [
+    {
+     "org": "Fortis Healthcare",
+     "title": "Head of Strategy",
+     "from": 2019,
+     "to": null
+    },
+    {
+     "org": "UTI Asset Management",
+     "title": "Research Analyst",
+     "from": 2011,
+     "to": 2017
+    }
+   ],
+   "education": [
+    {
+     "school": "XLRI",
+     "degree": "PGDBM",
+     "year": 2011
+    }
+   ],
+   "tags": [
+    "healthcare",
+    "hospitals",
+    "asset management"
+   ],
+   "strength": 2,
+   "last": "2025-10-30",
+   "met": "Hospital sector deep-dive",
+   "knows": [
+    [
+     "c03",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "c31",
+   "name": "Pooja Menon",
+   "headline": "Manager, International Business, Asian Paints",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Asian Paints",
+     "title": "Manager, International Business",
+     "from": 2018,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "IIM Ahmedabad",
+     "degree": "PGP",
+     "year": 2018
+    }
+   ],
+   "tags": [
+    "decorative paints",
+    "international",
+    "consumer"
+   ],
+   "strength": 3,
+   "last": "2026-08-12",
+   "met": "IIM-A batchmate",
+   "knows": [
+    [
+     "c05",
+     3
+    ],
+    [
+     "c32",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "c32",
+   "name": "Varun Khanna",
+   "headline": "Strategy, Birla Opus Paints",
+   "city": "Mumbai",
+   "career": [
+    {
+     "org": "Birla Opus",
+     "title": "Senior Manager, Strategy",
+     "from": 2022,
+     "to": null
+    },
+    {
+     "org": "McKinsey & Company",
+     "title": "Associate",
+     "from": 2018,
+     "to": 2022
+    }
+   ],
+   "education": [
+    {
+     "school": "ISB",
+     "degree": "PGP",
+     "year": 2018
+    }
+   ],
+   "tags": [
+    "decorative paints",
+    "new entrants",
+    "strategy"
+   ],
+   "strength": 2,
+   "last": "2026-03-02",
+   "met": "Paints sector call",
+   "knows": [
+    [
+     "c31",
+     2
+    ]
+   ]
+  }
+ ],
+ "org_aliases": {
+  "Mentor Graphics": [
+   "Siemens EDA",
+   "Mentor Graphics (Siemens EDA)"
+  ],
+  "UTI Asset Management": [
+   "UTI AMC"
+  ],
+  "Sun Pharmaceutical": [
+   "Sun Pharma",
+   "Sun Pharmaceutical Industries"
+  ],
+  "Larsen & Toubro": [
+   "L&T"
+  ],
+  "Tata Consultancy Services": [
+   "TCS"
+  ],
+  "InterGlobe Aviation": [
+   "IndiGo"
+  ],
+  "Central Depository Services": [
+   "CDSL"
+  ],
+  "Kaynes Technology": [
+   "Kaynes Semicon"
+  ],
+  "Titan Company": [
+   "CaratLane",
+   "Tanishq"
+  ],
+  "Clean Science and Technology": [
+   "Clean Science"
+  ],
+  "Dr. Reddy's Laboratories": [
+   "Dr Reddy's"
+  ]
+ },
+ "org_company": {
+  "Reliance Industries": "RELIANCE",
+  "Jio Platforms": "RELIANCE",
+  "Tata Consultancy Services": "TCS",
+  "HDFC Bank": "HDFCBANK",
+  "ICICI Bank": "ICICIBANK",
+  "Bajaj Finance": "BAJFINANCE",
+  "Larsen & Toubro": "LT",
+  "Asian Paints": "ASIANPAINT",
+  "Titan Company": "TITAN",
+  "CaratLane": "TITAN",
+  "Sun Pharmaceutical": "SUNPHARMA",
+  "Trent": "TRENT",
+  "Dixon Technologies": "DIXON",
+  "Polycab India": "POLYCAB",
+  "Deepak Nitrite": "DEEPAKNTR",
+  "PI Industries": "PIIND",
+  "Kaynes Technology": "KAYNES",
+  "Kaynes Semicon": "KAYNES",
+  "Central Depository Services": "CDSL",
+  "InterGlobe Aviation": "INDIGO",
+  "Clean Science and Technology": "CLEAN",
+  "Vishay Intertechnology": "KAYNES",
+  "Birla Opus": "ASIANPAINT",
+  "Bayer CropScience": "PIIND",
+  "Micron Technology": "KAYNES"
+ },
+ "org_relation": {
+  "Vishay Intertechnology": {
+   "KAYNES": "JV partner (49% of Kaynes Semicon)"
+  },
+  "Birla Opus": {
+   "ASIANPAINT": "competitor"
+  },
+  "Bayer CropScience": {
+   "PIIND": "CSM customer (global innovator)"
+  },
+  "Micron Technology": {
+   "KAYNES": "OSAT peer in Sanand"
+  },
+  "Dixon Technologies": {
+   "KAYNES": "EMS peer"
+  },
+  "Mentor Graphics": {
+   "KAYNES": "former employer of Kaynes Semicon CEO"
+  },
+  "Tessolve Semiconductor": {
+   "KAYNES": "former employer of Kaynes Semicon CEO"
+  },
+  "Siemens EDA": {
+   "KAYNES": "design-tool partner"
+  },
+  "Dr. Reddy's Laboratories": {
+   "SUNPHARMA": "pharma peer"
+  },
+  "Axis Bank": {
+   "HDFCBANK": "private-bank peer",
+   "ICICIBANK": "private-bank peer"
+  }
+ },
+ "themes": {
+  "Semiconductors & OSAT": [
+   "semiconductors",
+   "OSAT",
+   "EDA",
+   "chip design",
+   "test & packaging",
+   "device physics",
+   "packaging",
+   "power devices"
+  ],
+  "Electronics manufacturing (EMS)": [
+   "EMS",
+   "mobile manufacturing",
+   "PLI",
+   "smart meters"
+  ],
+  "Specialty & agrochemicals": [
+   "agrochemicals",
+   "CSM",
+   "specialty chemicals",
+   "phenolics",
+   "catalysis",
+   "green chemistry",
+   "global crop protection"
+  ],
+  "Banks & regulation": [
+   "bank compliance",
+   "RBI regulation",
+   "private banks",
+   "credit risk",
+   "bank supervision"
+  ],
+  "Lending & NBFCs": [
+   "NBFCs",
+   "consumer credit",
+   "rural lending",
+   "retail lending"
+  ],
+  "Pharma quality & regulatory": [
+   "pharma quality",
+   "USFDA",
+   "regulatory",
+   "pharma regulatory",
+   "CDSCO"
+  ],
+  "Consumer & retail": [
+   "jewellery",
+   "gold",
+   "retail",
+   "D2C",
+   "value retail",
+   "apparel",
+   "decorative paints",
+   "dealer channel",
+   "consumer"
+  ],
+  "Capital markets": [
+   "ECM",
+   "QIPs",
+   "asset management",
+   "market infrastructure",
+   "depositories",
+   "broking",
+   "private equity"
+  ],
+  "Infrastructure & industrials": [
+   "metro rail",
+   "EPC",
+   "infrastructure",
+   "cables & wires",
+   "electricals",
+   "aviation",
+   "airlines"
+  ]
+ }
+}

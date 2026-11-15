@@ -1,0 +1,258 @@
+{
+ "_note": "Public registry: people named in exchange filings. Sources: the filing itself (Reg 30 'brief profile' annexures) plus public professional profiles/news. Tenure years marked approx are derived from public profiles and should be verified.",
+ "people": [
+  {
+   "id": "vn-srivatsan",
+   "name": "V. N. Srivatsan",
+   "company": "HDFCBANK",
+   "event": "Assumed office as Chief Compliance Officer, HDFC Bank on 6 Nov 2026 (3-year term); part of Senior Management.",
+   "bio": "About 34 years of experience, roughly 25 in banking, financial services and insurance and about 10 directly in compliance and regulatory inspection. He was previously Head of Compliance for Overseas Banking & Subsidiaries and Data Privacy Officer at ICICI Bank. He joined almost two months before the 4 Jan 2027 date given in the 30 Sep announcement, and succeeds Rakesh Kumar Rajput (ex-RBI, Department of Banking Supervision).",
+   "career": [
+    {
+     "org": "HDFC Bank",
+     "title": "Chief Compliance Officer",
+     "from": 2026,
+     "to": null
+    },
+    {
+     "org": "ICICI Bank",
+     "title": "Head – Compliance: Overseas Banking & Subsidiaries; Data Privacy Officer",
+     "from": null,
+     "to": 2026
+    }
+   ],
+   "education": [],
+   "sources": [
+    "https://nsearchives.nseindia.in/corporate/HDFCBANK3_06112026152141_SE_Intimation-Srivatsan.pdf",
+    "https://www.businesstoday.in/jobs/story/hdfc-bank-appoints-vn-srivatsan-as-chief-compliance-officer-for-three-year-term-558911-2026-09-30"
+   ],
+   "ask": [
+    "Why join ~2 months earlier than announced? Any regulatory observation driving urgency?",
+    "Priorities for the first 100 days: overseas branches, data privacy, conduct risk?",
+    "How does compliance at HDFC Bank compare with ICICI's after the merger?"
+   ]
+  },
+  {
+   "id": "leo-puri",
+   "name": "Leo Puri",
+   "company": "ASIANPAINT",
+   "event": "Independent Director of Asian Paints from 7 Sep 2026; Chairman-designate from 23 Jan 2027, succeeding R. Seshasayee. Shareholders approved by postal ballot (result filed 6 Nov 2026).",
+   "bio": "Masters in Philosophy, Politics & Economics from Oxford. Currently Advisory India Chair at Apax, Chairman of Fortis Healthcare, Lead Independent Director at Dr. Reddy's and Independent Director at Amadeus IT. Previously MD of UTI Asset Management, Chairman for South & South-East Asia at JPMorgan Chase, and earlier at Warburg Pincus and McKinsey. Former Chairman of AMFI.",
+   "career": [
+    {
+     "org": "Asian Paints",
+     "title": "Independent Director; Chairman-designate",
+     "from": 2026,
+     "to": null
+    },
+    {
+     "org": "Fortis Healthcare",
+     "title": "Chairman & Independent Director",
+     "from": 2024,
+     "to": null
+    },
+    {
+     "org": "Dr. Reddy's Laboratories",
+     "title": "Lead Independent Director",
+     "from": 2024,
+     "to": null
+    },
+    {
+     "org": "Apax",
+     "title": "Advisory India Chair",
+     "from": null,
+     "to": null
+    },
+    {
+     "org": "UTI Asset Management",
+     "title": "Managing Director & CEO",
+     "from": 2013,
+     "to": 2018,
+     "approx": true
+    },
+    {
+     "org": "JPMorgan Chase",
+     "title": "Chairman, South & South-East Asia",
+     "from": null,
+     "to": null
+    },
+    {
+     "org": "Warburg Pincus",
+     "title": "Managing Director",
+     "from": null,
+     "to": null
+    },
+    {
+     "org": "McKinsey & Company",
+     "title": "Partner",
+     "from": null,
+     "to": null
+    }
+   ],
+   "education": [
+    {
+     "school": "University of Oxford",
+     "degree": "Masters, PPE"
+    }
+   ],
+   "sources": [
+    "https://www.asianpaints.com/content/dam/asianpaints/website/secondary-navigation/investors/announcements-pdfs/2026-2027/Intimation-of-Appointment-of-Additional-and-Non-Executive-Director-of-the-Company.pdf",
+    "https://ch.marketscreener.com/insider/LEO-PURI-A0F76H/"
+   ],
+   "ask": [
+    "A financial-services chairman for a paint company: what is the board signalling about capital allocation as competition intensifies?",
+    "Will the board revisit the dividend payout, buybacks or adjacencies?",
+    "How will he work with the CEO through a margin downcycle?"
+   ]
+  },
+  {
+   "id": "raghu-panicker",
+   "name": "Raghu Panicker",
+   "company": "KAYNES",
+   "event": "To be MD & CEO of Kaynes Semicon once Vishay Intertechnology acquires 49% (binding term sheet, 12 Nov 2026).",
+   "bio": "Electronics & Communication engineer with an MBA. Started at Semiconductor Complex Ltd (government fab) as an R&D engineer in 1991, spent about 20 years as country manager at Mentor Graphics (now Siemens EDA), then ran APAC for Tessolve Semiconductor. Joined Kaynes as VP Business Strategy and has been CEO of Kaynes Semicon since Oct 2023, building the Sanand OSAT plant.",
+   "career": [
+    {
+     "org": "Kaynes Semicon",
+     "title": "CEO",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "Kaynes Technology",
+     "title": "VP Business Strategy",
+     "from": 2023,
+     "to": 2023
+    },
+    {
+     "org": "Tessolve Semiconductor",
+     "title": "Head, APAC business",
+     "from": 2021,
+     "to": 2023,
+     "approx": true
+    },
+    {
+     "org": "Mentor Graphics",
+     "title": "Country Manager",
+     "from": 2001,
+     "to": 2021,
+     "approx": true
+    },
+    {
+     "org": "Semiconductor Complex Ltd",
+     "title": "R&D Engineer",
+     "from": 1991,
+     "to": 2001
+    }
+   ],
+   "education": [
+    {
+     "school": "",
+     "degree": "B.E. (ECE), MBA"
+    }
+   ],
+   "sources": [
+    "https://nsearchives.nseindia.in/corporate/KAYNESTECH_12112026192018_KSPLVishay12Nov2026.pdf",
+    "https://www.entrepreneurindia.com/techshow/raghu-panicker.php",
+    "https://theisig.com/profiles/raghu-panicker/"
+   ],
+   "ask": [
+    "What does Vishay bring: anchor volumes, technology or customers? Is there a take-or-pay?",
+    "Sanand OSAT utilisation path and qualification timelines with Vishay parts",
+    "How is governance split between Kaynes and Vishay, and who controls capex decisions?"
+   ]
+  },
+  {
+   "id": "v-srinivasa-rangan",
+   "name": "V. Srinivasa Rangan",
+   "company": "HDFCBANK",
+   "event": "Re-appointed Whole-time Director (Executive Director) of HDFC Bank for one year from 23 Nov 2026, with RBI approval received 12 Nov.",
+   "bio": "Former Executive Director & CFO of erstwhile HDFC Ltd; Executive Director at HDFC Bank since 23 Nov 2023.",
+   "career": [
+    {
+     "org": "HDFC Bank",
+     "title": "Executive Director",
+     "from": 2023,
+     "to": null
+    },
+    {
+     "org": "HDFC Ltd",
+     "title": "Executive Director & CFO",
+     "from": null,
+     "to": 2023
+    }
+   ],
+   "education": [],
+   "sources": [
+    "https://nsearchives.nseindia.in/corporate/HDFCBANK3_13112026163422_SE_Intimation-_VSR.pdf"
+   ],
+   "ask": [
+    "One-year term (not three): what is the succession plan?"
+   ]
+  },
+  {
+   "id": "noel-tata",
+   "name": "Noel N. Tata",
+   "company": "TITAN",
+   "event": "Retired as Director and Vice-Chairman of Titan (filed 5 Nov 2026).",
+   "bio": "Chairman of Tata Trusts; long-standing Tata group director.",
+   "career": [
+    {
+     "org": "Titan Company",
+     "title": "Director & Vice-Chairman",
+     "from": null,
+     "to": 2026
+    },
+    {
+     "org": "Tata Trusts",
+     "title": "Chairman",
+     "from": 2024,
+     "to": null
+    }
+   ],
+   "education": [],
+   "sources": [
+    "https://nsearchives.nseindia.in/corporate/TITAN_05112026185140_SENNTata.pdf"
+   ],
+   "ask": [
+    "Who represents the Tata side on Titan's board now?"
+   ]
+  },
+  {
+   "id": "mayank-singhal",
+   "name": "Mayank Singhal",
+   "company": "PIIND",
+   "event": "Vice Chairperson & MD, PI Industries (management)",
+   "bio": "Leads PI Industries; primary voice on guidance in the FY26 and FY27 earnings calls.",
+   "career": [
+    {
+     "org": "PI Industries",
+     "title": "Vice Chairperson & Managing Director",
+     "from": null,
+     "to": null
+    }
+   ],
+   "education": [],
+   "sources": [],
+   "ask": []
+  },
+  {
+   "id": "muthukumar-n",
+   "name": "Dr Muthukumar Narayanaswamy",
+   "company": "KAYNES",
+   "event": "Managing Director, Kaynes Technology (management)",
+   "bio": "MD of Kaynes Technology; gave the FY27 cash-positive commitment on the Q1 FY27 call.",
+   "career": [
+    {
+     "org": "Kaynes Technology",
+     "title": "Managing Director",
+     "from": null,
+     "to": null
+    }
+   ],
+   "education": [],
+   "sources": [],
+   "ask": []
+  }
+ ]
+}
