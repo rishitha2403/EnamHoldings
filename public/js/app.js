@@ -108,14 +108,16 @@ function renderToday() {
   const wins = [[24, "24h"], [72, "3 days"], [168, "7 days"], [336, "14 days"]];
   const nFold = folds.reduce((a, g) => a + g.items.length, 0);
   const tail = [lines.length ? `${lines.length} worth a glance` : "", nFold ? `${nFold} routine filings folded` : ""].filter(Boolean).join(", ");
+  const span = S.win <= 24 ? "in the last 24 hours" : S.win <= 72 ? "in the last 3 days" : S.win <= 168 ? "this week" : "in this window";
   const lead = briefs.length
-    ? `<em>${briefs.length} ${briefs.length === 1 ? "thing needs" : "things need"} you.</em> ${tail ? tail + "." : "Nothing else moved."}`
-    : `<em>Quiet window.</em> ${tail || "Nothing filed."}`;
+    ? `<em>${briefs.length} ${briefs.length === 1 ? "item needs" : "items need"} your attention</em> ${span}. ${tail ? tail.charAt(0).toUpperCase() + tail.slice(1) + "." : ""}`
+    : `<em>Nothing material</em> ${span}. ${tail ? tail.charAt(0).toUpperCase() + tail.slice(1) + "." : ""}`;
+  const weekend = S.win <= 24 ? `<p class="sub" style="margin-top:-6px">Markets were shut Sat–Sun, so only late filings land overnight. Results season ran all week: <button class="acc" data-act="win" data-arg="168">see the week →</button></p>` : "";
   S.calledSyms = new Set();
 
   el.innerHTML = `
     <h1 class="hero">${lead}</h1>
-    <p class="sub">${D.snap.portfolio.length} holdings · ${fil.length} filings · prioritised for you</p>
+    <p class="sub">${D.snap.portfolio.length} holdings · ${fil.length} filings · prioritised for you</p>${weekend}
     <div class="chips">${wins.map(([h, l]) => `<button class="chip ${S.win === h ? "on" : ""}" data-act="win" data-arg="${h}">${l}</button>`).join("")}
       <label class="chip ${![24, 72, 168, 336].includes(S.win) ? "on" : ""}" style="display:inline-flex;align-items:center;gap:4px">Since <input type="date" id="since" min="2026-11-01" max="2026-11-15" value="${S.since || ""}" style="background:none;border:0;color:inherit;font:inherit;width:118px"></label>
       <button class="chip ghost" data-act="alerts">±${S.cfg.pricePct}% · ${S.cfg.volX}× vol ⚙</button></div>
