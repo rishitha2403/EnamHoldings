@@ -1,0 +1,20 @@
+{
+  "name": "finn",
+  "version": "1.0.0",
+  "description": "FINN: mobile-first financial investment agent (ENAM build challenge)",
+  "scripts": {
+    "test": "node test/run.js",
+    "dev": "node dev.js",
+    "data": "python3 pipeline/build.py"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
