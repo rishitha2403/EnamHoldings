@@ -3,15 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0a0c0f">
+<meta name="theme-color" content="#eef1ef">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="icon.svg">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>FINN · Financial Investment Agent</title>
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="desk-note"><b>FINN is built for your phone.</b> Open this URL on mobile, or use your browser's device mode. Data snapshot: NSE filings 3–15 Nov 2026, EOD prices to 13 Nov, screener fundamentals. The investor network is synthetic.</div>
+<div class="desk-note" hidden><b>FINN is built for your phone.</b> Open this URL on mobile, or use your browser's device mode. Data snapshot: NSE filings 3–15 Nov 2026, EOD prices to 13 Nov, screener fundamentals. The investor network is synthetic.</div>
 <div class="shell" id="shell">
   <header class="top">
     <div class="brand">FIN<i>N</i></div>
@@ -23,9 +28,10 @@
     <section class="view" id="v-network"></section>
   </main>
   <nav class="tabs" id="tabs">
+    <div class="brand rail-brand">FIN<i>N</i></div>
     <button class="tab on" data-v="today"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h7"/></svg>Today</button>
     <button class="tab" data-v="research"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>Research</button>
-    <button class="ask-fab" id="askBtn" aria-label="Ask FINN"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg></button>
+    <button class="ask-fab" id="askBtn" aria-label="Ask FINN"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A2.5 2.5 0 0 1 4 13.5z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg><span class="ask-label">Ask FINN</span></button>
     <button class="tab" data-v="network"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="18" r="2"/><path d="M10 10.5 6.5 7.5M14 11l3.3-2.6M10.3 13.8l-2.8 3.6M14 13.6l2.6 2.8"/></svg>Network</button>
     <button class="tab" data-v="alerts" id="alertsTab"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>Alerts</button>
   </nav>
