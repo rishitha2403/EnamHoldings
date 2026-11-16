@@ -11,7 +11,7 @@ A mobile-first investor workflow with three layers that feed each other:
 ## Try it
 | | |
 |---|---|
-| Live app | `<your-vercel-url>` (open on a phone) |
+| Live app | `(https://enam-holdings-tau.vercel.app)` (open on a phone) |
 | Things to tap | Today → Kaynes results card (auditor flags + who to call) · HDFC Bank CCO card (bio → your path in via an ex-ICICI colleague) · Research → PIIND → *Promises* · Research → type any ticker (e.g. `NAVINFLUOR`) · Ask (centre button) → "Who knows Raghu Panicker?" · Alerts → drag the thresholds |
 
 ## Run locally
