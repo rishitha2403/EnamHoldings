@@ -1,7 +1,7 @@
 import * as E from "./engine.js";
 
 // ------------------------------------------------------------------ state
-const S = { view: "today", win: 24, sym: null, seg: "overview", cfg: null, live: {}, guidanceLive: {} };
+const S = { view: "today", win: 24, sym: null, seg: "overview", cfg: null, live: {}, guidanceLive: {}, pulse: "5d" };
 const DEF_CFG = { pricePct: 5, volX: 2, watch: ["results", "M&A", "management_change", "litigation", "fund_raise", "capex", "credit_rating", "pledging"] };
 const store = {
   get(k, d) { try { const v = localStorage.getItem("finn." + k); return v ? JSON.parse(v) : d; } catch { return d; } },
@@ -14,7 +14,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const inr = (v) => (v == null ? "—" : Math.round(v).toLocaleString("en-IN"));
 const pc = (v, d = 1) => `<span class="${v > 0 ? "up" : v < 0 ? "dn" : "mu"}">${E.fmtPct(v, d)}</span>`;
 const CAT = { results: "Results", "M&A": "M&A / JV", management_change: "Management", fund_raise: "Fund raise", litigation: "Regulatory", earnings_call: "Concall", investor_meetings: "Investor meet", credit_rating: "Rating", press_release: "Update", postal_ballot: "Postal ballot", agm_egm: "AGM/EGM", unclassified: "Routine", capex: "Capex", dividend: "Dividend", pledging: "Pledge", insider_trading: "Insider" };
-const PAL = ["#f2b84b", "#7fd6a8", "#8fb8ff", "#c3a8ff", "#ff9f8f", "#7fd3e6", "#e6c27f", "#b6e67f"];
+const PAL = ["#0f4c5c", "#5546b8", "#17834f", "#a8561a", "#2c6bc4", "#8a3b6b", "#4b6b2a", "#7a5c12"];
 const colorOf = (s) => PAL[[...s].reduce((a, c) => a + c.charCodeAt(0), 0) % PAL.length];
 const initials = (n) => n.replace(/^Prof\.\s*/, "").split(/\s+/).filter((w) => /^[A-Z]/.test(w)).slice(0, 2).map((w) => w[0]).join("");
 const av = (name, id = name, size = 26) => `<span class="av" style="background:${colorOf(id)};width:${size}px;height:${size}px">${esc(initials(name))}</span>`;
@@ -39,7 +39,7 @@ async function boot() {
   D.peopleById = Object.fromEntries(D.people.map((p) => [p.id, p]));
   D.names = Object.fromEntries(snap.portfolio.map((p) => [p.sym, p.name]));
   const a = new Date(snap.asof);
-  $("#asof").textContent = `${a.toLocaleDateString("en-IN", { weekday: "short", day: "numeric", month: "short", timeZone: "Asia/Kolkata" })} · 08:00 IST snapshot`;
+  $("#asof").textContent = `Snapshot: ${a.toLocaleDateString("en-IN", { weekday: "short", day: "numeric", month: "short", timeZone: "Asia/Kolkata" })}, 08:00 IST`;
   document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => (b.dataset.v === "alerts" ? openAlerts() : go(b.dataset.v))));
   $("#askBtn").addEventListener("click", () => openAsk());
   $("#scrim").addEventListener("click", closeSheet);
@@ -74,6 +74,7 @@ function onAction(e) {
     person: () => openPerson(arg),
     contact: () => openContact(arg),
     calls: () => openCalls(arg),
+    pulse: () => { S.pulse = arg; renderToday(); },
     unfold: () => { b.closest(".foldwrap").innerHTML = b.closest(".foldwrap").dataset.full; },
     copy: () => { const t = b.closest(".sheet .body, .card")?.querySelector(".draft")?.textContent || ""; navigator.clipboard?.writeText(t).then(() => toast("Draft copied"), () => toast("Copy not available")); },
     ask: () => { openAsk(arg); },
@@ -112,12 +113,13 @@ function renderToday() {
   const lead = briefs.length
     ? `<em>${briefs.length} ${briefs.length === 1 ? "item needs" : "items need"} your attention</em> ${span}. ${tail ? tail.charAt(0).toUpperCase() + tail.slice(1) + "." : ""}`
     : `<em>Nothing material</em> ${span}. ${tail ? tail.charAt(0).toUpperCase() + tail.slice(1) + "." : ""}`;
-  const weekend = S.win <= 24 ? `<p class="sub" style="margin-top:-6px">Markets were shut Sat–Sun, so only late filings land overnight. Results season ran all week: <button class="acc" data-act="win" data-arg="168">see the week →</button></p>` : "";
+  const weekend = S.win <= 24 ? `<p class="sub" style="margin-top:-6px">Markets were shut Sat–Sun, so only late filings land overnight. Results season ran all week: <button class="acc" data-act="win" data-arg="168" style="color:var(--pri);font-weight:600">See the week</button></p>` : "";
   S.calledSyms = new Set();
 
   el.innerHTML = `
     <h1 class="hero">${lead}</h1>
-    <p class="sub">${D.snap.portfolio.length} holdings · ${fil.length} filings · prioritised for you</p>${weekend}
+    <p class="sub">${fil.length} filings across your ${D.snap.portfolio.length} holdings, ranked for you.</p>${weekend}
+    ${pulseBlock(briefs)}
     <div class="chips">${wins.map(([h, l]) => `<button class="chip ${S.win === h ? "on" : ""}" data-act="win" data-arg="${h}">${l}</button>`).join("")}
       <label class="chip ${![24, 72, 168, 336].includes(S.win) ? "on" : ""}" style="display:inline-flex;align-items:center;gap:4px">Since <input type="date" id="since" min="2026-11-01" max="2026-11-15" value="${S.since || ""}" style="background:none;border:0;color:inherit;font:inherit;width:118px"></label>
       <button class="chip ghost" data-act="alerts">±${S.cfg.pricePct}% · ${S.cfg.volX}× vol ⚙</button></div>
@@ -126,7 +128,7 @@ function renderToday() {
     ${renderAlerts(alerts, allAlerts)}
 
     <div class="sec"><h2>Needs you</h2><span class="c">${briefs.length}</span></div>
-    ${briefs.length ? briefs.map(cardFor).join("") + (S.win < 168 ? `<button class="fold" data-act="win" data-arg="168" style="width:100%">Weekend view: see the full week of results season <span class="acc" style="margin-left:auto">7 days →</span></button>` : "") : `<div class="empty">Nothing material in the last ${S.win}h. <button class="acc" data-act="win" data-arg="168">Widen to 7 days →</button></div>`}
+    ${briefs.length ? briefs.map(cardFor).join("") + (S.win < 168 ? `<button class="fold" data-act="win" data-arg="168" style="width:100%">See the full week of results season <span class="acc" style="margin-left:auto">7 days</span></button>` : "") : `<div class="empty">Nothing material in the last ${S.win}h. <button class="acc" data-act="win" data-arg="168">Widen to 7 days</button></div>`}
 
     ${lines.length ? `<div class="sec"><h2>Worth a glance</h2><span class="c">${lines.length}</span></div>${lines.map(lineFor).join("")}` : ""}
 
@@ -136,6 +138,22 @@ function renderToday() {
     <p class="srcnote">Sources: NSE corporate announcements API, screener.in fundamentals and EOD price/volume. Every card links to its exchange filing. Network contacts are synthetic demo data.</p>`;
   const si = $("#since");
   if (si) si.onchange = () => { if (!si.value) return; S.since = si.value; S.win = Math.max(1, Math.round((new Date(D.snap.asof) - new Date(si.value + "T00:00:00+05:30")) / 36e5)); renderToday(); };
+}
+
+function pulseBlock(briefs) {
+  const flagged = new Set(briefs.map((g) => g.sym));
+  const k = S.pulse === "1d" ? 1 : 5, scale = k === 1 ? 3 : 8;
+  const tiles = D.snap.portfolio.map((p, i) => {
+    const c = D.prices[p.sym].c, n = c.length - 1, ch = E.pct(c[n], c[n - k]);
+    const a = 0.1 + 0.6 * Math.min(1, Math.abs(ch) / scale), rgb = ch >= 0 ? "23,131,79" : "192,57,47";
+    const fg = a > 0.42 ? "#fff" : ch >= 0 ? "#0e5c37" : "#8a2a22";
+    return `<button class="tile ${flagged.has(p.sym) ? "flagged" : ""}" data-act="research" data-arg="${p.sym}" title="${esc(p.name)}" style="background:rgba(${rgb},${a.toFixed(2)});color:${fg};animation-delay:${i * 18}ms">
+      <span class="s">${esc(p.sym.length > 8 ? p.sym.slice(0, 7) + "…" : p.sym)}</span><span class="v">${E.fmtPct(ch, 1)}</span></button>`;
+  }).join("");
+  return `<section class="pulse" aria-label="Portfolio pulse"><div class="pulse-h"><b>Your portfolio</b><span class="small">to ${D.snap.eod.slice(8)} Nov close</span>
+    <div class="seg2"><button class="${S.pulse === "1d" ? "on" : ""}" data-act="pulse" data-arg="1d">1 day</button><button class="${S.pulse === "5d" ? "on" : ""}" data-act="pulse" data-arg="5d">5 days</button></div></div>
+    <div class="tiles">${tiles}</div>
+    <div class="pulse-f"><span class="k1">Up</span><span class="k2">Down</span><span class="k3">Has a filing that needs you</span></div></section>`;
 }
 
 function renderAlerts(alerts, all) {
@@ -178,7 +196,7 @@ function cardFor(g) {
     <div class="ttl">${esc(f.title)}</div>
     ${why ? `<div class="why">${esc(why)}</div>` : ""}${flags}${body}${more}
     <div class="acts"><a class="btn" href="${esc(f.url)}" target="_blank" rel="noopener">Filing ↗</a>
-      <button class="btn ${hasResearch ? "pri" : ""}" data-act="research" data-arg="${g.sym}" ${D.guidance[g.sym] ? 'data-seg="promises"' : ""}>${D.guidance[g.sym] ? "Promised vs delivered →" : "Research →"}</button>
+      <button class="btn ${hasResearch ? "pri" : ""}" data-act="research" data-arg="${g.sym}" ${D.guidance[g.sym] ? 'data-seg="promises"' : ""}>${D.guidance[g.sym] ? "Promised vs delivered" : "Research"}</button>
       <button class="btn" data-act="calls" data-arg="${g.sym}">Who else?</button></div></article>`;
 }
 
@@ -198,7 +216,7 @@ function resultsBlock(g) {
 
 function pathHtml(x) {
   const ids = x.path.slice(1);
-  const nodes = [`<span class="av" style="background:#e9edf1">You</span>`].concat(ids.map((id) => `<span style="display:inline-flex;align-items:center;gap:4px">${av(D.net.byId[id].name, id)}<span class="small" style="color:var(--tx2)">${esc(D.net.byId[id].name.replace(/^Prof\.\s*/, "").split(" ")[0])}</span></span>`));
+  const nodes = [`<span class="av" style="background:#13232b">You</span>`].concat(ids.map((id) => `<span style="display:inline-flex;align-items:center;gap:4px">${av(D.net.byId[id].name, id)}<span class="small" style="color:var(--tx2)">${esc(D.net.byId[id].name.replace(/^Prof\.\s*/, "").split(" ")[0])}</span></span>`));
   return `<div class="path">${nodes.join('<span class="arrow">→</span>')}<span class="arrow">→</span><b>${esc(x.person ? x.person.name : "")}</b></div>`;
 }
 
@@ -243,7 +261,7 @@ function foldFor(folds) {
 function reconnectBlock(n) {
   const r = E.reconnect(D.net, D.filings, D.snap.asof).slice(0, n);
   if (!r.length) return "";
-  return `<div class="sec"><h2>Reasons to reconnect</h2><button class="r" data-act="tab" data-arg="network">All →</button></div>
+  return `<div class="sec"><h2>Reasons to reconnect</h2><button class="r" data-act="tab" data-arg="network">See all</button></div>
     ${r.map((x) => `<button class="card" data-act="contact" data-arg="${x.c.id}" style="display:flex;gap:10px;text-align:left;width:100%">${av(x.c.name, x.c.id, 34)}
       <div><div><b>${esc(x.c.name)}</b> <span class="small">· last spoke ${x.idle} days ago</span></div>
       <div class="why" style="margin-top:2px">${esc(x.e.to ? `Ex-${x.e.org}` : x.e.org)}: ${esc(D.names[x.f.sym] || x.f.sym)} just filed “${esc(x.f.title.slice(0, 60))}${x.f.title.length > 60 ? "…" : ""}”</div></div></button>`).join("")}`;
@@ -276,7 +294,7 @@ async function renderResearch() {
     wireSearch();
     return;
   }
-  el.innerHTML = top + `<div class="loading"><span class="spin"></span>Reading ${esc(S.sym)} filings and fundamentals…</div>`;
+  el.innerHTML = top + `<div class="loading"><span class="spin"></span>Reading ${esc(S.sym)} filings and fundamentals…</div><div class="skel"></div><div class="skel" style="height:150px"></div><div class="skel"></div>`;
   wireSearch();
   let C;
   try { C = await getCompany(S.sym); }
@@ -382,23 +400,23 @@ function barLine(labels, bars, line, title = "") {
   const y = (v) => H - 22 - (v / max) * (H - 40), ly = (v) => H - 22 - ((v - lmin) / (lmax - lmin || 1)) * (H - 44);
   const pts = line.map((v, i) => `${P + bw * i + bw / 2},${ly(v)}`).join(" ");
   return `<div class="chart">${title ? `<div class="ct">${esc(title)}</div>` : ""}<svg viewBox="0 0 ${W} ${H}" width="100%">
-    ${bars.map((v, i) => `<rect x="${P + bw * i + 4}" y="${y(v)}" width="${bw - 8}" height="${H - 22 - y(v)}" rx="3" fill="${i === bars.length - 1 ? "#f2b84b" : "#2b343e"}"/>`).join("")}
-    <polyline points="${pts}" fill="none" stroke="#8fc0ff" stroke-width="2"/>
-    ${line.map((v, i) => `<circle cx="${P + bw * i + bw / 2}" cy="${ly(v)}" r="2.5" fill="#8fc0ff"/>`).join("")}
-    ${line.map((v, i) => (i === line.length - 1 || i === 0 ? `<text x="${P + bw * i + bw / 2}" y="${ly(v) - 7}" font-size="10" fill="#8fc0ff" text-anchor="middle">${v.toFixed(0)}%</text>` : "")).join("")}
-    ${labels.map((l, i) => `<text x="${P + bw * i + bw / 2}" y="${H - 6}" font-size="9" fill="#7d8893" text-anchor="middle">${esc(l.replace(/^(\w{3}) 20(\d\d)$/, "$1'$2"))}</text>`).join("")}
-    <text x="${P + bw * (bars.length - 1) + bw / 2}" y="${y(bars.at(-1)) - 4}" font-size="10" fill="#f2b84b" text-anchor="middle">${inr(bars.at(-1))}</text></svg></div>`;
+    ${bars.map((v, i) => `<rect x="${P + bw * i + 4}" y="${y(v)}" width="${bw - 8}" height="${H - 22 - y(v)}" rx="3" fill="${i === bars.length - 1 ? "#0f4c5c" : "#d3dcd8"}"/>`).join("")}
+    <polyline points="${pts}" fill="none" stroke="#d98a12" stroke-width="2"/>
+    ${line.map((v, i) => `<circle cx="${P + bw * i + bw / 2}" cy="${ly(v)}" r="2.5" fill="#d98a12"/>`).join("")}
+    ${line.map((v, i) => (i === line.length - 1 || i === 0 ? `<text x="${P + bw * i + bw / 2}" y="${ly(v) - 7}" font-size="10" fill="#d98a12" text-anchor="middle">${v.toFixed(0)}%</text>` : "")).join("")}
+    ${labels.map((l, i) => `<text x="${P + bw * i + bw / 2}" y="${H - 6}" font-size="9" fill="#6c7c84" text-anchor="middle">${esc(l.replace(/^(\w{3}) 20(\d\d)$/, "$1'$2"))}</text>`).join("")}
+    <text x="${P + bw * (bars.length - 1) + bw / 2}" y="${y(bars.at(-1)) - 4}" font-size="10" fill="#0f4c5c" text-anchor="middle">${inr(bars.at(-1))}</text></svg></div>`;
 }
 function pairBars(labels, a, b, la, lb) {
   const W = 360, H = 160, P = 24, vals = [...a, ...b], max = Math.max(...vals, 1), min = Math.min(...vals, 0);
   const z = (v) => 12 + ((max - v) / (max - min || 1)) * (H - 36);
   const bw = (W - P * 2) / labels.length;
-  return `<div class="chart"><div class="ct"><span style="color:#7fd6a8">■ ${la}</span><span style="color:#8a949e">■ ${lb}</span></div><svg viewBox="0 0 ${W} ${H}" width="100%">
-    <line x1="${P}" x2="${W - P}" y1="${z(0)}" y2="${z(0)}" stroke="#2d3640"/>
+  return `<div class="chart"><div class="ct"><span style="color:#17834f">■ ${la}</span><span style="color:#8a9a94">■ ${lb}</span></div><svg viewBox="0 0 ${W} ${H}" width="100%">
+    <line x1="${P}" x2="${W - P}" y1="${z(0)}" y2="${z(0)}" stroke="#cfd8d4"/>
     ${labels.map((l, i) => { const x = P + bw * i; const ya = z(a[i]), yb = z(b[i]), y0 = z(0);
-      return `<rect x="${x + 4}" y="${Math.min(ya, y0)}" width="${bw / 2 - 5}" height="${Math.abs(y0 - ya)}" rx="2" fill="${a[i] < 0 ? "#ef6b5f" : "#45c08a"}"/>
-      <rect x="${x + bw / 2 + 1}" y="${Math.min(yb, y0)}" width="${bw / 2 - 5}" height="${Math.abs(y0 - yb)}" rx="2" fill="#4a5560"/>
-      <text x="${x + bw / 2}" y="${H - 6}" font-size="9.5" fill="#7d8893" text-anchor="middle">${esc(l)}</text>`; }).join("")}</svg></div>`;
+      return `<rect x="${x + 4}" y="${Math.min(ya, y0)}" width="${bw / 2 - 5}" height="${Math.abs(y0 - ya)}" rx="2" fill="${a[i] < 0 ? "#c0392f" : "#17834f"}"/>
+      <rect x="${x + bw / 2 + 1}" y="${Math.min(yb, y0)}" width="${bw / 2 - 5}" height="${Math.abs(y0 - yb)}" rx="2" fill="#c9d3cf"/>
+      <text x="${x + bw / 2}" y="${H - 6}" font-size="9.5" fill="#6c7c84" text-anchor="middle">${esc(l)}</text>`; }).join("")}</svg></div>`;
 }
 
 // ------------------------------------------------------------------ NETWORK
@@ -433,15 +451,15 @@ function egoGraph() {
   cs.forEach((c, i) => { const a = (i / cs.length) * Math.PI * 2 - Math.PI / 2; const r = 135 - c.strength * 17; pos[c.id] = [cx + Math.cos(a) * r * 1.15, cy + Math.sin(a) * r * 0.82]; });
   const hot = new Set(E.reconnect(D.net, D.filings, D.snap.asof).slice(0, 4).map((x) => x.c.id));
   const linked = new Set(D.people.flatMap((p) => E.pathsToPerson(D.net, p, D.snap.asof).filter((x) => x.degree === 1 && x.score > 0.3).map((x) => x.via.id)));
-  const edges = cs.flatMap((c) => (c.knows || []).map(([b]) => pos[b] ? `<line x1="${pos[c.id][0]}" y1="${pos[c.id][1]}" x2="${pos[b][0]}" y2="${pos[b][1]}" stroke="#2a313a" stroke-width="1"/>` : ""));
-  const spokes = cs.map((c) => `<line x1="${cx}" y1="${cy}" x2="${pos[c.id][0]}" y2="${pos[c.id][1]}" stroke="${linked.has(c.id) ? "#6c5fc7" : "#1c2229"}" stroke-width="${linked.has(c.id) ? 1.4 : 0.8}"/>`);
+  const edges = cs.flatMap((c) => (c.knows || []).map(([b]) => pos[b] ? `<line x1="${pos[c.id][0]}" y1="${pos[c.id][1]}" x2="${pos[b][0]}" y2="${pos[b][1]}" stroke="#d5ddd9" stroke-width="1"/>` : ""));
+  const spokes = cs.map((c) => `<line x1="${cx}" y1="${cy}" x2="${pos[c.id][0]}" y2="${pos[c.id][1]}" stroke="${linked.has(c.id) ? "#5546b8" : "#e3e9e6"}" stroke-width="${linked.has(c.id) ? 1.4 : 0.8}"/>`);
   const nodes = cs.map((c) => { const [x, y] = pos[c.id]; return `<g data-act="contact" data-arg="${c.id}" style="cursor:pointer">
-    ${hot.has(c.id) ? `<circle cx="${x}" cy="${y}" r="15" fill="none" stroke="#f2b84b" stroke-dasharray="2 3"/>` : ""}
+    ${hot.has(c.id) ? `<circle cx="${x}" cy="${y}" r="15" fill="none" stroke="#d98a12" stroke-width="1.5" stroke-dasharray="2 3"/>` : ""}
     <circle cx="${x}" cy="${y}" r="${6 + c.strength * 1.6}" fill="${colorOf(c.id)}" opacity="${0.55 + c.strength * 0.09}"/>
-    <text x="${x}" y="${y + 3}" font-size="7.5" font-weight="700" text-anchor="middle" fill="#0a0c0f">${esc(initials(c.name))}</text></g>`; });
+    <text x="${x}" y="${y + 3}" font-size="7.5" font-weight="700" text-anchor="middle" fill="#fff">${esc(initials(c.name))}</text></g>`; });
   return `<div class="graph"><svg viewBox="0 0 ${W} ${H}" width="100%">${spokes.join("")}${edges.join("")}
-    <circle cx="${cx}" cy="${cy}" r="17" fill="#e9edf1"/><text x="${cx}" y="${cy + 4}" font-size="10" font-weight="800" text-anchor="middle" fill="#0a0c0f">You</text>${nodes.join("")}</svg>
-    <div class="legend">closer = stronger tie · <span style="color:#a99bff">violet</span> = links to someone in this week's filings · <span class="acc">dashed</span> = reconnect</div></div>`;
+    <circle cx="${cx}" cy="${cy}" r="17" fill="#13232b"/><text x="${cx}" y="${cy + 4}" font-size="10" font-weight="800" text-anchor="middle" fill="#fff">You</text>${nodes.join("")}</svg>
+    <div class="legend">closer = stronger tie · <span style="color:var(--vio)">violet</span> = links to someone in this week's filings · <span class="acc">dashed ring</span> = reconnect</div></div>`;
 }
 
 // ------------------------------------------------------------------ sheets
